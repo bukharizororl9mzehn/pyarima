@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gold Price Forecast</title>
+</head>
+<body>
+	<h1>Gold Price Forecast</h1>
+	<form method="post" action="{{ url_for('forecast') }}">
+		<label for="start_date">Start Date:</label>
+		<input type="date" name="start_date" required><br><br>
+		
+		<label for="end_date">End Date:</label>
+		<input type="date" name="end_date" required><br><br>
+		
+		<label for="frequency">Frequency:</label>
+		<select name="frequency" required>
+			<option value="">Select</option>
+			<option value="W">Weekly</option>
+			<option value="M">Monthly</option>
+			<option value="Y">Yearly</option>
+		</select><br><br>
+		
+		<input type="submit" value="Forecast">
+	</form>
+</body>
+</html>
